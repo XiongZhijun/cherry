@@ -8,7 +8,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.PrintStream;
 
-import os.cherry.test.StringBuilderOutStream.Filter;
+import os.cherry.lang.io.StringBuilderOutStream;
+import os.cherry.lang.io.StringBuilderOutStream.Filter;
 
 /**
  * @author Xiong Zhijun

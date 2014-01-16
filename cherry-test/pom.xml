@@ -18,6 +18,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>os.cherry</groupId>
+			<artifactId>cherry-lang</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>

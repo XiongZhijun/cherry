@@ -2,7 +2,7 @@
  * Copyright © 2014 Xiong Zhijun, All Rights Reserved.
  * Email : hust.xzj@gmail.com
  */
-package os.cherry.test;
+package os.cherry.lang.io;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import os.cherry.test.StringBuilderOutStream.Filter;
+import os.cherry.lang.io.StringBuilderOutStream.Filter;
 
 /**
  * @author Xiong Zhijun
@@ -67,5 +67,4 @@ public class StringBuilderOutStreamTest {
 		os.write(" Hello world".getBytes());
 		assertEquals("haha Hello world", os.toString());
 	}
-
 }

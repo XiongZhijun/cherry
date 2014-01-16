@@ -4,4 +4,21 @@
 	<groupId>os.cherry</groupId>
 	<artifactId>cherry-lang</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
+
+	<properties>
+		<!-- Test -->
+		<junit.version>4.7</junit.version>
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Test Artifacts -->
+
+	</dependencies>
 </project>

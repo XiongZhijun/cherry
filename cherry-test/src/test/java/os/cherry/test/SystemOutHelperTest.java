@@ -9,7 +9,7 @@ import static os.cherry.test.SystemOutHelper.LINE_SEPARATOR;
 import org.junit.Before;
 import org.junit.Test;
 
-import os.cherry.test.StringBuilderOutStream.Filter;
+import os.cherry.lang.io.StringBuilderOutStream.Filter;
 
 /**
  * @author Xiong Zhijun
