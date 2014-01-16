@@ -5,6 +5,7 @@
 package os.cherry.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.PrintStream;
 
@@ -37,6 +38,7 @@ public class SystemOutHelper {
 	}
 
 	public void assertOutString(String expected) {
+		assertNotNull(outStream);
 		assertEquals(expected, outStream.toString());
 	}
 
