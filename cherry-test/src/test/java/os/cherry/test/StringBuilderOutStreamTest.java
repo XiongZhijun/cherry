@@ -2,7 +2,7 @@
  * Copyright © 2014 Xiong Zhijun, All Rights Reserved.
  * Email : hust.xzj@gmail.com
  */
-package io.cherry.test;
+package os.cherry.test;
 
 import static org.junit.Assert.*;
 
@@ -11,6 +11,8 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import os.cherry.test.StringBuilderOutStream;
 
 /**
  * @author Xiong Zhijun

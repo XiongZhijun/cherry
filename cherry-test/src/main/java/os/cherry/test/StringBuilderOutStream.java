@@ -2,7 +2,7 @@
  * Copyright © 2014 Xiong Zhijun, All Rights Reserved.
  * Email : hust.xzj@gmail.com
  */
-package io.cherry.test;
+package os.cherry.test;
 
 import java.io.IOException;
 import java.io.OutputStream;

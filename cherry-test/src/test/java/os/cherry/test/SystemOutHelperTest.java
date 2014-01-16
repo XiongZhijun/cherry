@@ -2,12 +2,14 @@
  * Copyright © 2014 Xiong Zhijun, All Rights Reserved.
  * Email : hust.xzj@gmail.com
  */
-package io.cherry.test;
+package os.cherry.test;
 
-import static io.cherry.test.SystemOutHelper.LINE_SEPARATOR;
+import static os.cherry.test.SystemOutHelper.LINE_SEPARATOR;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import os.cherry.test.SystemOutHelper;
 
 /**
  * @author Xiong Zhijun
@@ -24,7 +26,7 @@ public class SystemOutHelperTest {
 	}
 
 	/**
-	 * Test method for {@link io.cherry.test.SystemOutHelper#redirectOut()}.
+	 * Test method for {@link os.cherry.test.SystemOutHelper#redirectOut()}.
 	 */
 	@Test
 	public void testRedirectOut() {
