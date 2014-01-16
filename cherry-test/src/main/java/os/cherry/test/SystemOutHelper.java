@@ -8,6 +8,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.PrintStream;
 
+import os.cherry.test.StringBuilderOutStream.Filter;
+
 /**
  * @author Xiong Zhijun
  * @email hust.xzj@gmail.com
@@ -23,6 +25,14 @@ public class SystemOutHelper {
 	public void redirectOut() {
 		outStream = new StringBuilderOutStream();
 		System.setOut(new PrintStream(outStream));
+	}
+
+	public void addFilter(Filter filter) {
+		outStream.addFilter(filter);
+	}
+
+	public void removeFilter(Filter filter) {
+		outStream.removeFilter(filter);
 	}
 
 	public void assertOutString(String expected) {

@@ -4,7 +4,7 @@
  */
 package os.cherry.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import os.cherry.test.StringBuilderOutStream;
+import os.cherry.test.StringBuilderOutStream.Filter;
 
 /**
  * @author Xiong Zhijun
@@ -49,6 +49,23 @@ public class StringBuilderOutStreamTest {
 		assertEquals("123A", os.toString());
 		os.write(0x42);
 		assertEquals("123AB", os.toString());
+	}
+
+	@Test
+	public void testWithFilter() throws IOException {
+		Filter filter = new Filter() {
+			public boolean ignore(String str) {
+				return str.contains("Hello");
+			}
+		};
+		os.addFilter(filter);
+		os.write("Hello world".getBytes());
+		assertEquals("", os.toString());
+		os.write("haha".getBytes());
+		assertEquals("haha", os.toString());
+		os.removeFilter(filter);
+		os.write(" Hello world".getBytes());
+		assertEquals("haha Hello world", os.toString());
 	}
 
 }
