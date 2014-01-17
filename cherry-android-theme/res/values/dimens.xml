@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="ButtonTextSize">20sp</dimen>
+    <dimen name="WindowTitleSize">45dip</dimen>
+</resources>

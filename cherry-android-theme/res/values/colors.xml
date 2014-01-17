@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  -->
+    <color name="WindowBackground">#E5E5E5</color>
+    <color name="ButtonNormal">#96AA39</color>
+    <color name="ButtonPressed">#71CBE1</color>
+    <color name="ButtonTextColor">#FFFFFF</color>
+    <color name="ActionBarBackground">#96AA39</color>
+    <color name="ActionBarTextColor">#FFFFFF</color>
+    <!--  -->
+
+</resources>
