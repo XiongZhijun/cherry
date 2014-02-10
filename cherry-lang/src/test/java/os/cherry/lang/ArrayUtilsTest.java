@@ -25,4 +25,16 @@ public class ArrayUtilsTest {
 		assertFalse(ArrayUtils.isEmpty(new Integer[] { 1 }));
 	}
 
+	@Test
+	public void testAdd() {
+		assertArrayEquals(new String[] { "h1", "h2" },
+				ArrayUtils.add(String.class, "h1", new String[] { "h2" }));
+		assertArrayEquals(new String[] { "h1" },
+				ArrayUtils.add(String.class, "h1", null));
+		assertArrayEquals(new String[] { "h1" },
+				ArrayUtils.add(String.class, "h1", new String[0]));
+		assertArrayEquals(new String[] { "h1", null, null, null },
+				ArrayUtils.add(String.class, "h1", new String[3]));
+	}
+
 }
