@@ -80,6 +80,23 @@ public class ByteArray {
 		return ArrayUtils.indexOf(element, array, startIndex);
 	}
 
+	public byte[] get(int startIndex, int endIndex) {
+		if (isEmpty() || startIndex >= size() || endIndex <= 0
+				|| startIndex > endIndex) {
+			return EMPTY_BYTE_ARRAY;
+		}
+		if (startIndex < 0) {
+			startIndex = 0;
+		}
+		if (endIndex > size()) {
+			endIndex = size();
+		}
+		int removedLength = endIndex - startIndex;
+		byte[] removed = new byte[removedLength];
+		System.arraycopy(element, startIndex, removed, 0, removedLength);
+		return removed;
+	}
+
 	public byte[] remove(int startIndex, int endIndex) {
 		if (isEmpty() || startIndex >= size() || endIndex <= 0
 				|| startIndex > endIndex) {
@@ -93,8 +110,8 @@ public class ByteArray {
 		}
 		int removedLength = endIndex - startIndex;
 		byte[] removed = new byte[removedLength];
-		byte[] data = new byte[element.length];
 		System.arraycopy(element, startIndex, removed, 0, removedLength);
+		byte[] data = new byte[element.length];
 		System.arraycopy(element, 0, data, 0, startIndex);
 		System.arraycopy(element, endIndex, data, startIndex, size() - endIndex);
 		element = data;

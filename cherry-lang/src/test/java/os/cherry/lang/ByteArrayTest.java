@@ -62,6 +62,25 @@ public class ByteArrayTest {
 	}
 
 	@Test
+	public void testGet() {
+		ByteArray array = new ByteArray();
+		array.addAll(new byte[] { 0x23, 0x34, 0x43, 012, 0x32 });
+		assertArrayEquals(new byte[0], array.get(0, 0));
+		assertArrayEquals(new byte[0], array.get(0, -1));
+		assertArrayEquals(new byte[0], array.get(-1, -1));
+		assertArrayEquals(new byte[0], array.get(-1, -99));
+		assertArrayEquals(new byte[0], array.get(10, 5));
+
+		assertArrayEquals(new byte[] { 0x23 }, array.get(0, 1));
+		assertArrayEquals(new byte[] { 0x23, 0x34, 0x43 }, array.get(0, 3));
+		assertArrayEquals(new byte[] { 0x23, 0x34, 0x43, 012, 0x32 },
+				array.get(0, 10));
+		assertArrayEquals(new byte[] { 0x23, 0x34, 0x43, 012, 0x32 },
+				array.toArray());
+		assertEquals(5, array.size());
+	}
+
+	@Test
 	public void testClear() {
 		byteArray.clear();
 		assertTrue(byteArray.isEmpty());
